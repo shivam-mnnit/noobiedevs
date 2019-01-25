@@ -7,7 +7,6 @@ class Items(models.Model):
     user_email = models.CharField(max_length=30)
     about_item = models.CharField(max_length=200)
     item_tag = models.CharField(max_length=20)
-    item_price = models.CharField(max_length=10)
     item_image = models.ImageField(upload_to='media', null=True)
 
     # class Meta:

@@ -12,13 +12,13 @@
 <link rel="stylesheet" type="text/css" href="{% static 'signup/style1.css' %}">
 
 {% block body_content %}
-    <h1 style="margin-top: 20px; margin-left: 40%">Add items to sell</h1>
+    <h1 style="margin-top: 20px; margin-left: 40%">Add Details Of Person Found</h1>
 <div class="container" >
 
   <form action="{% url 'additem' %}" method="post" style="width: 950px; height: 400px">
        {% csrf_token %}
    <div class="form-group">
-        <label for="exampleInputName"><span>Username</span>
+        <label for="exampleInputName"><span>Person Name</span>
             <input type="text" name="username" style="font-size: 13pt; height: 32px; width:300px; " class="form-control" id="exampleInputName" placeholder="Enter name" required>
         </label>
         <label for="exampleInputNumber"><span>Phone number</span>
@@ -31,7 +31,7 @@
    </div>
 
   <div class="form-group">
-      <label for="exampleTextarea"><span>About Item</span>
+      <label for="exampleTextarea"><span>About Person</span>
     <textarea class="form-control" name="aboutitem" style="width: 500px" id="exampleTextarea" rows="2" maxlength="200" required></textarea>
         </label>
 
@@ -44,11 +44,12 @@
           <select id="tags" name="tag">
             <option name="Male" value="Male">Male</option>
             <option name="Female" value="Female">Female</option>
+          
            
           </select>
       </label>
 
-      <label for="exampleInputFile"><span style="margin-left: 220px">Item image</span>
+      <label for="exampleInputFile"><span style="margin-left: 220px">Person image</span>
         <input type="file" name="image" style="margin-left: 200px" class="form-control-file" id="exampleInputFile" accept="image/*" aria-describedby="fileHelp" required>
       </label>
   </div>

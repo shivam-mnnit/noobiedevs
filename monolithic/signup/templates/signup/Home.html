@@ -1,7 +1,7 @@
 <head>
      {% block title %}
      {% endblock %}
-    <title>MNNIT CART</title>
+    <title>KUMBH KHOJ</title>
     {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,7 +84,7 @@
                     <!-- <span class="icon-bar"></span>
                     <span class="icon-bar"></span> -->
                 </button>
-                <a href="MNNIT_KART.html" class="navbar-brand">MNNIT CART</a>
+                <a href="MNNIT_KART.html" class="navbar-brand">KUMBH KHOJ</a>
             </div>
 
 
@@ -100,13 +100,13 @@
                     <li ><a href="#">Contact</a></li>
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Item Tags<span class="caret"></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Person Type<span class="caret"></a>
 
                         <ul class="dropdown-menu" id="tags">
-                            <li ><a href="books/">Books</a></li>
-                            <li ><a href="cycle/">Cycle</a></li>
-                            <li ><a href="cooler/">Cooler</a></li>
-                            <li ><a href="all/">All items</a></li>
+                            <li ><a href="books/">Boy</a></li>
+                            <li ><a href="cycle/">Girl</a></li>
+                            <li ><a href="cooler/">Baby</a></li>
+                            <li ><a href="all/">Senior Citizen</a></li>
                         </ul>
                     </li>
 
@@ -128,7 +128,7 @@
                 <!-- right-margin -->
                 <ul class="nav navbar-nav navbar-right">
                     <span style="font-weight: bold; font-size: 20px">Welcome {{ username }}&nbsp;</span>
-                    <a href="upload.html" class="btn btn-success" >ADD&nbsp;</a>
+                    <a href="upload.html" class="btn btn-success" >FOUND&nbsp;</a>
                     <a  href="logout/" class="btn btn-success"  name="logout" color="red">Logout</a>
 
                 </ul>
@@ -154,7 +154,7 @@
                <div class = "card-reveal" style="background: #5897fb">
                   <span class = "card-title grey-text text-darken-4">
                      <i class = "material-icons right">close</i></span><br>
-                   <p><h4>Person Name:{{ allitems.user_name }}</h4>
+                   <p><h5>Person Name:{{ allitems.user_name }}</h5>
                   <!--  <h5>Price: Rs {{ allitems.item_price }}</h5> -->
                    <h6>Contact of person who found:{{ allitems.user_phone }}</h6>
                    <h7>Description: {{ allitems.about_item }}</h7><br>

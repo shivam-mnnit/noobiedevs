@@ -138,7 +138,6 @@ def add(request):
         userphone = request.POST.get('phonenumber')
         useremail = request.POST.get('email')
         aboutitem = request.POST.get('aboutitem')
-        price = request.POST.get('price')
         tag = request.POST.get('tag')
         image = request.POST.get('image')
 
@@ -146,7 +145,7 @@ def add(request):
 
 
         items = Items.objects.all()
-        Items.objects.create(user_name=username, user_phone=userphone, user_email=useremail, about_item=aboutitem, item_tag=tag, item_price=price, item_image=image)
+        Items.objects.create(user_name=username, user_phone=userphone, user_email=useremail, about_item=aboutitem, item_tag=tag, item_image=image)
         items = Items.objects.all()
         for item in items:
             item.save()

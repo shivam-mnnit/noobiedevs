@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/3FEFAEBD-C726-4347-A304-631C92D5AB2C/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 {% include 'signup/navbar.html' %}
@@ -18,16 +18,34 @@
   <form action="{% url 'additem' %}" method="post" style="width: 950px; height: 400px">
        {% csrf_token %}
    <div class="form-group">
+    <div class="row">
+    <div class="col-lg-6">
         <label for="exampleInputName"><span>Person Name</span>
             <input type="text" name="username" style="font-size: 13pt; height: 32px; width:300px; " class="form-control" id="exampleInputName" placeholder="Enter name" required>
         </label>
+    </div>
+    <div class="col-lg-6">
         <label for="exampleInputNumber"><span>Phone number</span>
             <input type="number" name="phonenumber" style="font-size: 13pt; height: 32px; width:300px;" class="form-control" id="exampleInputNumber" placeholder="Enter contact"  required>
         </label>
-
-        <label for="exampleInputEmail1"><span>Email address</span>
-            <input type="email" name="email" style="font-size: 13pt; height: 32px; width:300px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+        <label for="exampleInputEmail1"><span>Age</span>
+            <input type="number" name="email" style="font-size: 13pt; height: 32px; width:70px;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required maxlength='3'>
         </label>
+    </div>
+    <div class="col-lg-6">
+        <label for="tags"><span>Gender</span>
+
+          <select id="tags" name="tag">
+            <option name="Male" value="Male">Male</option>
+            <option name="Female" value="Female">Female</option>
+          </select>
+      </label>
+    </div>
+  </div>
    </div>
 
   <div class="form-group">
@@ -39,13 +57,7 @@
           <input type="number" name="price" style="width:200px;" class="form-control" id="exampleInputPrice" placeholder="Enter price"  required>
       </label> -->
 
-      <label for="tags"><span>Tags</span>
-
-          <select id="tags" name="tag">
-            <option name="Male" value="Male">Male</option>
-            <option name="Female" value="Female">Female</option>
-          </select>
-      </label>
+      
 
       <label for="exampleInputFile"><span style="margin-left: 220px">Person image</span>
         <input type="file" name="image" style="margin-left: 200px" class="form-control-file" id="exampleInputFile" accept="image/*" aria-describedby="fileHelp" required>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/3FEFAEBD-C726-4347-A304-631C92D5AB2C/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <title>The Materialize Cards Example</title>
       <meta name = "viewport" content = "width = device-width, initial-scale = 1">
@@ -159,7 +159,8 @@
                   <!--  <h5>Price: Rs {{ allitems.item_price }}</h5> -->
                    <h6>Contact of person who found:{{ allitems.user_phone }}</h6>
                    <h7>Description: {{ allitems.about_item }}</h7><br>
-                   Gender: {{ allitems.item_tag }}
+                   Gender: {{ allitems.item_tag }}<br>
+                   <h7>Age: {{ allitems.user_email }}</h7>
                    </p>
                    <button name="delete" type="submit" value="delete"></button>
                   <a href="{% url 'delete_post' id=allitems.id %}"style="font-size: 25px">delete</a>

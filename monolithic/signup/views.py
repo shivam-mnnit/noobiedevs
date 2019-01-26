@@ -210,7 +210,7 @@ def register(request):
                 flag = 0
 
         if flag == 0:
-            print("worng inout dala hai user ne")
+            print("wrong input dala hai user ne")
 
             template = loader.get_template('signup/Register.html')
             context = {

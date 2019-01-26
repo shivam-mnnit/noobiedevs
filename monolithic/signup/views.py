@@ -286,3 +286,7 @@ def new_page_vj(request):
     p = 0
     return render_to_response("signup/Home.html", context)
     
+
+def  delete_post(request, id):
+    Items.objects.filter(id=id).delete();
+    return redirect('home')

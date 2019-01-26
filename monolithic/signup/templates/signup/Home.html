@@ -139,6 +139,8 @@
 
     <div class = "row">
           {% for allitems in all_items %}
+          <form action="{% url 'delete_post' id=allitems.id %} " method="POST" >
+       {% csrf_token %}
          <div class = "col s12 m3">
             <div class = "card  blue-grey lighten-4">
                <div class = "card-image  waves-effect waves-block waves-light">
@@ -159,9 +161,12 @@
                    <h7>Description: {{ allitems.about_item }}</h7><br>
                    Gender: {{ allitems.item_tag }}
                    </p>
+                   <button name="delete" type="submit" value="delete"></button>
+                  <a href="{% url 'delete_post' id=allitems.id %}"style="font-size: 25px">delete</a>
                </div>
             </div>
          </div>
+       </form>
          {% endfor %}
       </div>
 

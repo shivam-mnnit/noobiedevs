@@ -17,7 +17,7 @@ class Items(models.Model):
 
     #views of item in database(only here given name will be shown in database table to user)
     def __str__(self):
-        return self.user_name +'---' +  self.item_tag + '---Price:' + self.item_price
+        return self.user_name +'---' +  self.item_tag
 
     # def image_thumbnail(self):
     #     return '<div class="panel-heading post-heading1"><img src="%s"/></div>' % (self.item_image)

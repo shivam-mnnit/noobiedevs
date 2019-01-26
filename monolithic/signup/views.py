@@ -33,10 +33,10 @@ def signUP(request):
 
 #Redirects to only books based items
 @login_required
-def books(request):
+def Male(request):
     all_users = User.objects.all()
     template = loader.get_template('signup/Home.html')
-    all_items = Items.objects.filter(item_tag="Books")
+    all_items = Items.objects.filter(item_tag="Male")
     print(all_items)
     context = {
         'all_users': all_users,
@@ -47,10 +47,10 @@ def books(request):
 
 #Redirects to only cycle based items
 @login_required
-def cycle(request):
+def Female(request):
     all_users = User.objects.all()
     template = loader.get_template('signup/Home.html')
-    all_items = Items.objects.filter(item_tag="Cycle")
+    all_items = Items.objects.filter(item_tag="Female")
     print(all_items)
     context = {
         'all_users': all_users,
@@ -60,11 +60,10 @@ def cycle(request):
     return render_to_response("signup/Home.html", context)
 
 #Redirects to only Cooler based items
-@login_required
-def cooler(request):
+def lost(request):
     all_users = User.objects.all()
     template = loader.get_template('signup/Home.html')
-    all_items = Items.objects.filter(item_tag="Cooler")
+    all_items = Items.objects.filter(user_name="Shivam")
     print(all_items)
     context = {
         'all_users': all_users,
@@ -72,10 +71,7 @@ def cooler(request):
     }
     p = 0
     return render_to_response("signup/Home.html", context)
-
-def lost(request):
-    template = loader.get_template("signup/Lost.html")
-    return HttpResponse(template.render)
+    
 #Redirects to Upload.Html page
 @login_required
 def upload(request):

@@ -73,6 +73,9 @@ def cooler(request):
     p = 0
     return render_to_response("signup/Home.html", context)
 
+def lost(request):
+    template = loader.get_template("signup/Lost.html")
+    return HttpResponse(template.render)
 #Redirects to Upload.Html page
 @login_required
 def upload(request):

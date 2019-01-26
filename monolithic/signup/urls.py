@@ -26,4 +26,5 @@ urlpatterns = [
     url('cooler/upload.html',views.upload,name='upload'),
     url('all/$',views.item_detail,name='all'),
     url('all/upload.html',views.upload,name='upload'),
+    # url(r'^lost/$' ,views.lost, name='lost'),
 ]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Item</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/3FEFAEBD-C726-4347-A304-631C92D5AB2C/main.js" charset="UTF-8"></script><script src="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			background-image: url('');
+			background-size: cover;
+			background-position: center center;
+			background-attachment: fixed;
+		}
+		#ui{
+			background-color: #333;
+			padding:30px;
+			margin-top:50px;
+			border-radius: 10px;   
+			opacity: 0.8;
+		}
+		#ui label,h1{
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6">
+				<div id="ui">
+					<h1 class="text-center">Add Details</h1>
+					<form class="form-group text-center" >
+						<label>Name : </label>
+						<input type="text" name="username" class="form-control" placeholder="Enter the name..." required>
+						<br>
+						<label>Age : </label>
+						<input type="number" name="age" class="form-control" placeholder="Enter the age..." required>
+						<br>
+						<select class="form-control" required>
+							<option>Gender </option>
+							<option>Male</option>
+							<option>Female</option>
+							<option>Others</option>
+						</select>
+						<br>
+						<label>Height :</label>
+						<input type="number" name="height" class="form-control" required placeholder="Enter the approximate height in cms..">
+						<label>Description :</label><br>
+						<textarea rows="4" cols="65"placeholder="Enter the color,complextion etc of the person" maxlength="150"></textarea>
+						<br>
+						<input type="submit" name="submit" value="submit" class="btn btn-primary btn-block btn-lg">
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+	</div>
+</body>
+</html>

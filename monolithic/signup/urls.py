@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^added/$', views.add, name='additem'),
     url(r'^dash/$', views.item_detail, name='collect'),
     url(r'^dash/upload.html/$', views.upload, name='dash_upload'),
+    url(r'^delete_post/(?P<id>\d+)/$', views.delete_post, name='delete_post'),
     url('logout/$',views.signout,name='signout'),
     url('Male/$',views.Male,name='Male'),
     url('Male/upload.html',views.upload,name='upload'),
@@ -29,5 +30,6 @@ urlpatterns = [
     url('all/upload.html',views.upload,name='upload'),
     url(r'^find_image/$',views.new_page_vj,name='search_function'),
     url(r'^find_image/upload.html/$',views.upload,name='upload'),
+
     # url(r'^lost/$' ,views.lost, name='lost'),
 ]

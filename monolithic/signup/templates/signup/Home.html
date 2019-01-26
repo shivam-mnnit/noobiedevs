@@ -111,7 +111,7 @@
 
               <!-- search bar -->
                     <div class="col-sm-3 col-md-3 pull-right">
-                          <form class="navbar-form" role="search">
+                          <form class="navbar-form" role="search" action="{% url 'search_function' %}">
                               {% csrf_token %}
                               <div class="input-group">
                                <input type="text" style="width: 150px" class="form-control" placeholder="Search" name="srch-term" id="srch-term">

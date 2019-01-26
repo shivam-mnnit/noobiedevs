@@ -273,4 +273,16 @@ def signout(request):
 
     return HttpResponse(template.render(context, request))
 
-
+def new_page_vj(request):
+    # return render(request,'signup/newpage.html',{'data1':request.GET['srch-term']})
+    all_users = User.objects.all()
+    template = loader.get_template('signup/Home.html')
+    all_items = Items.objects.filter(user_name=request.GET['srch-term'])
+    print(all_items)
+    context = {
+        'all_users': all_users,
+        'all_items': all_items
+    }
+    p = 0
+    return render_to_response("signup/Home.html", context)
+    
